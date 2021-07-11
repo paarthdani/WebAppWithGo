@@ -14,7 +14,6 @@ func index_handler(w http.ResponseWriter, r *http.Request) {
 	<p> this is a multiline print.
 	I am passing a variable here - %s
 	`, new)
-
 }
 
 func about_handler(w http.ResponseWriter, r *http.Request) {
