@@ -6,7 +6,14 @@ import (
 )
 
 func index_handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "This is a Web App!")
+	new := "Variable"
+	fmt.Fprintf(w, "<h1>This is a Web App!</h1>")
+	fmt.Fprintf(w, "<p>which was made using GoLang</p>")
+	fmt.Fprintf(w, "<p>GoLang is fast and simple.</p>")
+	fmt.Fprintf(w, `
+	<p> this is a multiline print.
+	I am passing a variable here - %s
+	`, new)
 }
 
 func about_handler(w http.ResponseWriter, r *http.Request) {
